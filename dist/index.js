@@ -6,4 +6,7 @@ let userCount = 0;
 wss.on("connection", (socket) => {
     userCount = userCount + 1;
     console.log("New client connected #" + userCount);
+    socket.on("message", (message) => {
+        console.log("message received: " + message);
+    });
 });
