@@ -14,6 +14,5 @@ wss.on("connection", (socket) => {
         allSockets.forEach(s => {
             s.send(message.toString() + ": sent from the server");
         })
-        
     })
 })
